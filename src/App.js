@@ -1,10 +1,13 @@
+import React from 'react';
+import  { SearchComponent }  from './components/SearchComponent/index';
+
+import './Scss/global.scss';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <SearchComponent />
   );
 }
 
 export default App;
+

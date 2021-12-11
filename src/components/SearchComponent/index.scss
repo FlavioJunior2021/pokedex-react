@@ -1,0 +1,22 @@
+#search-component{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+
+    .search-container{
+        input{
+            width: 360px;
+            padding: 12px;
+            border: 1px solid #CCCCCC;
+            border-radius: 16px;
+
+            color: black;
+            font-size: 16px;
+            font-family: 'Readex Pro', sans-serif;
+            font-weight: 100;
+        }
+    }
+
+}

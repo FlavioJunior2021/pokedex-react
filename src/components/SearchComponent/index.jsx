@@ -27,6 +27,7 @@ export function SearchComponent(){
                 />
             </div>
            <ShowThisComponent 
+            name={ pokeObj.name }
             image={ pokeObj.sprite }
            />
         </div>

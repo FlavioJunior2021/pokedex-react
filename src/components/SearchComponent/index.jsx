@@ -8,6 +8,7 @@ import './index.scss';
 export function SearchComponent(){
 
     const [pokeObj, setPokeObj] = useState({})
+    const [isLoading, setLoading] = useState(false);
 
     function getValue(e){
         if(e.key === "Enter"){
@@ -18,6 +19,7 @@ export function SearchComponent(){
     async function handleSearch(searchThis){
         let search = await fetchPokemon(searchThis);
         setPokeObj(search);
+        setLoading(true);
     }
     return(
         <div id="search-component">
@@ -26,10 +28,13 @@ export function SearchComponent(){
                     onKeyDown={(e) => getValue(e)}
                 />
             </div>
-           <ShowThisComponent 
-            name={ pokeObj.name }
-            image={ pokeObj.sprite }
-           />
+           {isLoading === true ? 
+                <ShowThisComponent 
+                name={ pokeObj.name }
+                image={ pokeObj.sprite }
+               />
+               : <p>loading...</p>
+            }
         </div>
     );
 };

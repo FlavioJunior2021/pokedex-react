@@ -4,11 +4,11 @@ export function ShowThisComponent( { name,image,hp,attack,defense,special,specia
 
     return(
         <div id="show-component">
-            <div className="poke-name">
-                <h2>{name}</h2>
+            <div className="poke-img">
+                <img src={ image } alt="pokemón" />
             </div>
-            <div className="poke-ilustration">
-                <img src={image} alt="" />
+            <div className="poke-stats">
+                <h1>{ name }</h1>
             </div>
         </div>
     );

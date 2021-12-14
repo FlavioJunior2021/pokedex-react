@@ -9,6 +9,9 @@ export function ShowThisComponent( { name,image,hp,attack,defense,special,specia
             </div>
             <div className="poke-stats">
                 <h1>{ name }</h1>
+                <div>
+                    
+                </div>
             </div>
         </div>
     );

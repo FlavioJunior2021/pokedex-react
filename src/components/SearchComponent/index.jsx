@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { fetchPokemon } from '../../services/pokeApi';
-
 import { ShowThisComponent } from '../ShowThisComponent/index';
 
 import './index.scss';
@@ -41,8 +40,9 @@ export function SearchComponent(){
                     speed={pokeObj.speed}
                     especial={pokeObj.especial}
                     especial2={pokeObj.especial2}
+                    moves={ pokeObj.moves }
                />
-               : <p>loading...</p>
+               : <></>
             }
         </div>
     );

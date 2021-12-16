@@ -12,7 +12,8 @@ export async function fetchPokemon(id){
         speed: json.stats[5].base_stat,
         type: json.types[0].type.name,
         weight: json.weight,
-        species: json.species.name
+        species: json.species.name,
+        moves: json.moves
     }
     return filteredPokemon
 }

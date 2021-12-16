@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+   
     .poke-img{
 
         background: rgba( 255, 255, 255, 0.25 );
@@ -12,7 +12,7 @@
         -webkit-backdrop-filter: blur( 8px );
         border-radius: 10px;
         border:1px solid rgba (255, 255, 255, 0,18);
-        border-radius: 50%;
+        border-radius: 20%;
 
         img{
             width: 290px;
@@ -21,11 +21,33 @@
     .poke-stats{
 
         margin-top: 12px;
-        height: 500px;
+        margin-bottom: 12px;
 
         h1{
             font-weight: 400;
             text-transform: capitalize;
+            text-align: center;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .poke-info,.poke-attributes{
+
+            background-color: rgba(9, 13, 58, 0.842);
+            margin: 10px;
+
+            border: 1px solid #000000;
+            border-radius: 26px;
+            text-align: center;
+        
+            display: flex;
+            gap: 20px;
+            padding: 12px;
+
+            >p{
+                color: white;
+            }
+            
         }
     }
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { fetchPokemonMoves } from '../../services/pokeApi'
+import { PokeMovesController } from '../PokeMovesComponent/index';
 
 import './index.scss';
 
@@ -56,11 +56,15 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
                     <div>
                         <button onClick={setMoves} className="btn-true"> moves </button>
                     </div>
-                    {click === true ? <ul>
-                        {movesArray.map((moves, index) => <li key={index}> <p> {moves.name},{moves.power} </p> </li> ) }
-                        </ul> : <></>
+                    {click === true ? <div>
+                        {movesArray.map((moves, index) => <PokeMovesController 
+                            key={index}
+                            moves={ moves.name }
+                            movePower={ moves.power }
+                        /> ) }
+                        </div> : <></>
                     }
-                </div>
+            </div>
         </div>
     );
 };

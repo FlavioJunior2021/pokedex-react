@@ -1,19 +1,35 @@
 import { useState } from 'react';
 
+import { fetchPokemonMoves } from '../../services/pokeApi'
+
 import './index.scss';
 
 export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,species, moves } ){
 
     const [click, setClick] = useState(false);
+    const [movesArray, setMovesArray] = useState([]);
+    const movesArr = [];
+
+    async function getPokeMoves(){
+       for(let i = 0; i < moves.length; i++){
+           let thisMove = moves[i].move.url;
+           let req = await fetch(thisMove);
+           let json = await req.json();
+           movesArr.push(json);
+       }
+       console.log(movesArr)
+       setMovesArray(movesArr)
+    }
 
     function setMoves(){
         if(click){
             setClick(false);
         }else{
             setClick(true);
+            getPokeMoves();
         }
     }
-    
+
     return(
         <div id="show-component">
             <div className="poke-img">
@@ -43,7 +59,7 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
                         <button onClick={setMoves} className="btn-true"> moves </button>
                     </div>
                     {click === true ? <ul>
-                        {moves.map((moves, index) => <li key={index}> <p> {moves.move.name} </p> </li> ) }
+                        {movesArray.map((moves, index) => <li key={index}> <p> {moves.name},{moves.power} </p> </li> ) }
                         </ul> : <></>
                     }
                 </div>

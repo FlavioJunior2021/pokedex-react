@@ -7,12 +7,13 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
     const [click, setClick] = useState(false);
 
     function setMoves(){
-        setClick(true);
+        if(click){
+            setClick(false);
+        }else{
+            setClick(true);
+        }
     }
-    function returnClick(){
-        setClick(false);
-    }
-
+    
     return(
         <div id="show-component">
             <div className="poke-img">
@@ -39,8 +40,7 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             <div className="poke-moves">
                     <h1>blows</h1>
                     <div>
-                        {click === false ? <button className="btn-true" onClick={setMoves}> click here for moves</button> : 
-                        <button className="btn-false" onClick={returnClick}> click here for moves</button>}
+                        <button onClick={setMoves} className="btn-true"> moves </button>
                     </div>
                     {click === true ? <ul>
                         {moves.map((moves, index) => <li key={index}> <p> {moves.move.name} </p> </li> ) }

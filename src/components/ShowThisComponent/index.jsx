@@ -17,8 +17,7 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
            let json = await req.json();
            movesArr.push(json);
        }
-       console.log(movesArr)
-       setMovesArray(movesArr)
+       setMovesArray(movesArr);
     }
 
     function setMoves(){
@@ -29,7 +28,6 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             getPokeMoves();
         }
     }
-
     return(
         <div id="show-component">
             <div className="poke-img">

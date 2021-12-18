@@ -21,7 +21,7 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             setMovesArray(movesArr);
          }
          getPokeMoves();
-    },[name])
+    },[name, moves]);
 
     async function getPokeMoves(){
        for(let i = 0; i < moves.length; i++){
@@ -64,18 +64,19 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
                     <p>especial defense: { especial2 }</p>
                 </div>
             </div>
+            <div>
+                <button onClick={setMoves} className="btn-true"> moves </button>
+            </div>
             <div className="poke-moves">
-                    <h1>blows</h1>
-                    <div>
-                        <button onClick={setMoves} className="btn-true"> moves </button>
-                    </div>
-                    {click === true ? <div>
+                    {click ? <div>
                         {movesArray.map((moves, index) => <PokeMovesController 
                             key={index}
                             moves={ moves.name }
                             movePower={ moves.power }
+                            moveType={ moves.type.name }
+                            effect={ moves.effect_entries[0].short_effect }
                         /> ) }
-                        </div> : <></>
+                        </div> : <div className="hidden"></div>
                     }
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { PokeMovesController } from '../PokeMovesComponent/index';
 
@@ -10,6 +10,19 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
     const [movesArray, setMovesArray] = useState([]);
     const movesArr = [];
 
+    useEffect(() => {
+        async function getPokeMoves(){
+            for(let i = 0; i < moves.length; i++){
+                let thisMove = moves[i].move.url;
+                let req = await fetch(thisMove);
+                let json = await req.json();
+                movesArr.push(json);
+            }
+            setMovesArray(movesArr);
+         }
+         getPokeMoves();
+    },[name])
+
     async function getPokeMoves(){
        for(let i = 0; i < moves.length; i++){
            let thisMove = moves[i].move.url;
@@ -19,7 +32,6 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
        }
        setMovesArray(movesArr);
     }
-
     function setMoves(){
         if(click){
             setClick(false);
@@ -28,6 +40,7 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             getPokeMoves();
         }
     }
+
     return(
         <div id="show-component">
             <div className="poke-img">

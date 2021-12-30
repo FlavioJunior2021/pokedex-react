@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { PokeType } from '../PokeTypeImg/index'
+
 import { PokeMovesController } from '../PokeMovesComponent/index';
 
 import './index.scss';

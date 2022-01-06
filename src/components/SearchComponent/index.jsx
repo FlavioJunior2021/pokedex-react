@@ -1,18 +1,12 @@
-import { fetchPokemon } from '../../services/pokeApi';
-
 import './index.scss';
 
 export function SearchComponent(){
 
-    function getValue(e){
+
+    async function getValue(e){
         if(e.key === "Enter"){
-            let target = e.target.value
-            handleSearch(target.toLowerCase());
+            let target = e.target.value;
         }
-    }
-    async function handleSearch(searchThis){
-        let search = await fetchPokemon(searchThis);
-        return search
     }
 
     return(

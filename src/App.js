@@ -1,11 +1,13 @@
-import React from 'react';
-import  { SearchComponent }  from './components/SearchComponent/index';
+import { BrowserRouter } from 'react-router-dom';
+import { CreateAuthContext }  from './context/pokeContext';
 
 import './Scss/global.scss';
 
 function App() {
   return (
-    <SearchComponent />
+    <BrowserRouter>
+      <CreateAuthContext />
+    </BrowserRouter>
   );
 }
 

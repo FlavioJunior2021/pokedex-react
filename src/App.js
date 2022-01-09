@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={ <AllPokemonsPage /> } path="/" exact />
-          <Route element={ <PokemonUserPage /> } path="/pokemon/name" />
+          <Route element={ <PokemonUserPage /> } path="/pokemon" />
         </Routes>
       </BrowserRouter>
     </ContextProvider>

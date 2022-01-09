@@ -4,7 +4,7 @@ const PokeContext = createContext();
 
 export default function ContextProvider({ children }){
 
-    const [userPokemon, setUserPokemon] = useState({})
+    const [userPokemon, setUserPokemon] = useState({});
 
     return(
         <PokeContext.Provider value={{userPokemon, setUserPokemon}}>

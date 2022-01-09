@@ -1,17 +1,22 @@
 import React from 'react';
 import { usePokemon } from '../../context/context';
-import { fetchPokemon } from '../../services/pokeApi'
+import { fetchPokemon } from '../../services/pokeApi';
+
+import { useNavigate } from 'react-router-dom';
 import './index.scss';
 
 export function SearchComponent(){
 
     const { setUserPokemon } = usePokemon();
+    const navigate = useNavigate();
+
 
     async function getValue(e){
         if(e.key === "Enter"){
             let target = e.target.value;
             let pokemon = await fetchPokemon(target);
             setUserPokemon(pokemon);
+            navigate("/pokemon");
         }
     }
 

@@ -5,6 +5,7 @@ import { usePokemon } from '../../context/context';
 import { ShowThisComponent } from '../../components/ShowThisComponent/index';
 
 import './index.scss';
+import close from '../../assets/images/x(1).svg';
 
 export function PokemonUserPage(){
 
@@ -13,7 +14,6 @@ export function PokemonUserPage(){
 
     return (
         <div id="PokemonUser">
-            <Link to="/">Return</Link>
             <ShowThisComponent 
                 name={ userPokemon.name }
                 image={ userPokemon.sprite }
@@ -27,6 +27,10 @@ export function PokemonUserPage(){
                 especial2={userPokemon.especial2}
                 moves={ userPokemon.moves }
             />
+            <Link to="/" id='link'>
+                <img src={ close } alt="closer" />
+            </Link>
         </div>
     )
 }
+

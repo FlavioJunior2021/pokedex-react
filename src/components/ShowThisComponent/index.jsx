@@ -4,24 +4,11 @@ import { PokeMovesController } from '../PokeMovesComponent/index';
 
 import './index.scss';
 
-export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,species, moves } ){
+export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,moves } ){
 
     const [click, setClick] = useState(false);
     const [movesArray, setMovesArray] = useState([]);
     const movesArr = [];
-
-    useEffect(() => {
-        async function getPokeMoves(){
-            for(let i = 0; i < moves.length; i++){
-                let thisMove = moves[i].move.url;
-                let req = await fetch(thisMove);
-                let json = await req.json();
-                movesArr.push(json);
-            }
-            setMovesArray(movesArr);
-         }
-         getPokeMoves();
-    },[name, moves]);
 
     async function getPokeMoves(){
        for(let i = 0; i < moves.length; i++){

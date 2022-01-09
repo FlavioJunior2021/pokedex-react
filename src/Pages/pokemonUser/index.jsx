@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { usePokemon } from '../../context/context';
 import { ShowThisComponent } from '../../components/ShowThisComponent/index';
 
+import './index.scss';
+
 export function PokemonUserPage(){
 
     const { userPokemon } = usePokemon();
-    console.log(userPokemon)
+    
 
     return (
-        <div>
+        <div id="PokemonUser">
+            <Link to="/">Return</Link>
             <ShowThisComponent 
                 name={ userPokemon.name }
                 image={ userPokemon.sprite }
@@ -24,6 +28,5 @@ export function PokemonUserPage(){
                 moves={ userPokemon.moves }
             />
         </div>
-        
     )
 }

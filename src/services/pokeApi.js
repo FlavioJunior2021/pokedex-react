@@ -24,7 +24,8 @@ export async function fetchAllPokemons(num){
     const filteredPokemon = {
         name: json.name,
         sprite: json.sprites.front_default,
-        species: json.species.name
+        species: json.species.name,
+        id: json.id
     }
     return filteredPokemon;
 }

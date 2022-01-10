@@ -15,5 +15,16 @@ export async function fetchPokemon(id){
         species: json.species.name,
         moves: json.moves
     }
-    return filteredPokemon
+    return filteredPokemon;
+}
+
+export async function fetchAllPokemons(num){
+    const req = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}/`);
+    const json = await req.json();
+    const filteredPokemon = {
+        name: json.name,
+        sprite: json.sprites.front_default,
+        species: json.species.name
+    }
+    return filteredPokemon;
 }

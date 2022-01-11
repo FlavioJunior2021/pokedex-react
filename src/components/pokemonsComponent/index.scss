@@ -2,13 +2,21 @@
 
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     text-align: center;
+    flex-wrap: wrap;
+
+
     button{
+        border: none;
+        background: transparent;
+    }
+    #load-button{
         padding: 10px;
         border-radius: 18px;
         border: 1px solid #000000;
-        color: #fff;
+        color: #000000;
         text-transform: uppercase;
         margin: 10px;
 

@@ -13,7 +13,7 @@ export function AllPokemonsComponent(){
     const { setUserPokemon } = usePokemon();
     const nav = useNavigate();
 
-    const [load, setLoad] = useState(25);
+    const [load, setLoad] = useState(30);
 
     const allPokemons = [];
 
@@ -44,7 +44,7 @@ export function AllPokemonsComponent(){
                     <SelectComponent image={pokemons.sprite} name={pokemons.name} id={pokemons.id}/>
                 </button>
             )}
-            <button onClick={() => setLoad(load + 25)}>load more</button>
+            <button id="load-button" onClick={() => setLoad(load + 30)}>load more</button>
         </div>
     );
 };

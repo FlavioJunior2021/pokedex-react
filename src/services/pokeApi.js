@@ -29,3 +29,9 @@ export async function fetchAllPokemons(num){
     }
     return filteredPokemon;
 }
+
+export async function fetchTest(test){
+    const req = await fetch(`https://pokeapi.co/api/v2/pokemon/${test}/`);
+    const json = await req.json();
+    return json;
+}

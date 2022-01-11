@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { fetchPokemon } from '../../services/pokeApi';
 
@@ -13,13 +13,16 @@ export function PokemonUserPage(){
 
     const { userPokemon } = usePokemon();
     const [ pokemon,setPokemon ] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function setPokeUser(){
             let req = await fetchPokemon(userPokemon);
             setPokemon(req);
         }
-        setPokeUser();
+        setPokeUser().catch(() => {
+            navigate("/");
+        })
     },[])
     
 

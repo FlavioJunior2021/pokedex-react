@@ -1,6 +1,6 @@
 <h1 align="center"> Pokedex </h1>
 
-![Pokedex](https://user-images.githubusercontent.com/89926456/148776430-77a20798-75d6-4f16-9444-cffa276b6a7d.png)
+![Captura de tela 2022-01-11 - 08 45 06](https://user-images.githubusercontent.com/89926456/148937846-947c24c2-4436-4592-9c67-2b2a262141a6.png)
 ![Pokedex](https://user-images.githubusercontent.com/89926456/148776733-c888b8eb-015b-4f78-ac52-14e8895b9d15.png)
 
 <h1 align="center">

@@ -86,11 +86,16 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            opacity: 0.9;
 
             h3{
                 font-family:'Ubuntu Mono', monospace;
                 color: white;
                 font-size: 25px;
+            }
+
+            &:hover{
+                opacity: 1;
             }
         }
     }

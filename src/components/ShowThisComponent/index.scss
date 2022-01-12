@@ -50,19 +50,38 @@
             }
         }
     }
+    .info-stats{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+
+        p{
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            font-family:'Ubuntu Mono', monospace;
+        }
+        
+    }
     .pokemon-stats{
 
         display: flex;
         flex-direction: row;
+        align-items: center; 
         flex-wrap: wrap;
         padding-top: 10px;
         
-
-        #life,#speed{
+        #life,#speed,#attack,#defense,#especial-defense,#especial-attack{
 
             text-align: center;
             padding-top: 59px;
-            margin: 15px;
+            margin: 25px;
 
             width: 150px;
             height: 150px;

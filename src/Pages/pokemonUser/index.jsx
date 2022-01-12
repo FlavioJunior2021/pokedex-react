@@ -40,6 +40,7 @@ export function PokemonUserPage(){
                 especial={pokemon.especial}
                 especial2={pokemon.especial2}
                 moves={ pokemon.moves }
+                height={ pokemon.height }
             />
             <Link to="/" id='link'>
                 <img src={ close } alt="closer" />

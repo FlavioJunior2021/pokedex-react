@@ -13,7 +13,8 @@ export async function fetchPokemon(id){
         type: json.types[0].type.name,
         weight: json.weight,
         species: json.species.name,
-        moves: json.moves
+        moves: json.moves,
+        height: json.height
     }
     return filteredPokemon;
 }

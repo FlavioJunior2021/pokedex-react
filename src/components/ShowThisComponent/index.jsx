@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { PokeMovesController } from '../PokeMovesComponent/index';
 
 import './index.scss';
 
-export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,moves } ){
+export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,moves,height } ){
 
     const [click, setClick] = useState(false);
     const [movesArray, setMovesArray] = useState([]);
@@ -30,41 +30,16 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
 
     return(
         <div id="show-component">
-            <div className="poke-img">
-                <img src={ image } alt="pokemón" />
-            </div>
-            <div className="poke-stats">
+            <div className="header">
                 <h1>{ name }</h1>
+                <div id="poke-image">
+                    <img src={ image } alt="pokémon" />
+                </div>
                 <div className="poke-info">
-                    <p>type: { type }</p>
-                    <p>weight: { weight }hg</p>
-                    <p>hp: { hp }</p>
+                    <p>{ (height/10 ).toPrecision() }M</p>
+                    <p>&lt; { type } &gt;</p>
+                    <p>{ (weight*100).toPrecision()}G</p>
                 </div>
-                <div className="poke-attributes">
-                    <p>attack: { attack }</p>
-                    <p>defense: {defense }</p>
-                    <p>speed: { speed }</p>
-                </div>
-                <h1>special</h1>
-                <div className="poke-attributes">
-                    <p>especial attack: { especial }</p>
-                    <p>especial defense: { especial2 }</p>
-                </div>
-            </div>
-            <div>
-                <button onClick={setMoves} className="btn-true"> moves </button>
-            </div>
-            <div className="poke-moves">
-                    {click ? <div>
-                        {movesArray.map((moves, index) => <PokeMovesController 
-                            key={index}
-                            moves={ moves.name }
-                            movePower={ moves.power }
-                            moveType={ moves.type.name }
-                            effect={ moves.effect_entries[0].short_effect }
-                        /> ) }
-                        </div> : <div className="hidden"></div>
-                    }
             </div>
         </div>
     );

@@ -1,105 +1,47 @@
 #show-component {
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-   
-    .poke-img{
 
-        background: rgba( 255, 255, 255, 0.25 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 8px );
-        -webkit-backdrop-filter: blur( 8px );
-        border-radius: 10px;
-        border:1px solid rgba (255, 255, 255, 0,18);
-        border-radius: 20%;
-
-        img{
-            width: 290px;
-        }
-    }
-    .poke-stats{
-
-        margin-top: 12px;
-        margin-bottom: 12px;
-
-        h1{
-            font-weight: 400;
-            text-transform: capitalize;
-            text-align: center;
-
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .poke-info,.poke-attributes{
-
-            background-color: rgba(9, 13, 58, 0.842);
-            margin: 10px;
-
-            border: 1px solid #000000;
-            border-radius: 26px;
-            text-align: center;
-        
-            display: flex;
-            gap: 20px;
-            padding: 12px;
-
-            >p{
-                color: white;
-            }
-            
-        }
-    }
-    .btn-true{
-
-        padding: 10px;
-        border: 1px solid #000000;
-        border-radius: 26px;
-
-        margin-bottom: 12px;
-
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-
-        color: #FFFFFF;
-        background-color: rgba(9, 13, 58, 0.842);
-
-        transition:  0.5s;
-
-        &:active{
-            transform: translate(0, -5px);
-        }
-    }
-    .poke-moves{
+    .header{
 
         display: flex;
         flex-direction: column;
-        align-items: center;
-
-        padding-bottom: 18px;
-
-        >div{
-            overflow: scroll;
-            height: 300px;
-        }
-        .hidden{
-            overflow: hidden;
-            height: 0px;
-        }
-
+       
+        height: 280px;
+        width: 100%;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        background-color: #FF4040;
+        
         h1{
-            font-weight: 400;
-            text-transform: capitalize;
+            font-family: 'Ubuntu Mono', monospace;
+            color: white;
+            text-transform: uppercase;
+        }
+        #poke-image{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        
+            img{
+                width: 200px;
+            }
+        }
+        .poke-info{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
             text-align: center;
 
-            padding-top: 10px;
-            padding-bottom: 10px;
+            p{
+                color: white;
+                font-family: 'Ubuntu Mono', monospace;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
         }
-
-        li{
-            list-style: none;
-        }
-
     }
-
 }

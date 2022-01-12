@@ -38,7 +38,20 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
                 <div className="poke-info">
                     <p>{ (height/10 ).toPrecision() }M</p>
                     <p>&lt; { type } &gt;</p>
-                    <p>{ (weight*100).toPrecision()}G</p>
+                    <p>{ (weight/10).toPrecision()}KG</p>
+                </div>
+            </div>
+            <h1>Statistics</h1>
+            <div className="pokemon-stats">
+                <div id="life" style={{border: "1px solid black", backgroundColor: 'green'}}>
+                    <h3>
+                        { hp }
+                    </h3>
+                </div>
+                <div id="speed" style={{border: "1px solid black", backgroundColor: 'yellow'}}>
+                    <h3>
+                        { speed }
+                    </h3>
                 </div>
             </div>
         </div>

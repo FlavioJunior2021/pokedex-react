@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { PokeMovesController } from '../PokeMovesComponent/index';
+import { PokemonStats } from '../PokemonStatsComponent/index';
 
 import './index.scss';
 
@@ -43,7 +44,9 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             </div>
             <h1>Statistics</h1>
             <div className="pokemon-stats">
-                
+                <PokemonStats 
+                    life={ hp }
+                />
             </div>
         </div>
     );

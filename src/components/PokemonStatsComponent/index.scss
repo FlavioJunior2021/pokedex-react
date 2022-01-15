@@ -1,0 +1,28 @@
+#pokemon-stats{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    #life{
+        display: flex;
+        flex-direction: column;
+
+        .life-stats{
+            padding: 50px;
+            border-radius: 50%;
+            h2{
+                color: #fff;
+                font-family: 'Ubuntu Mono', monospace;
+                font-size: 32px;
+            }
+        }
+        p{
+            color: #333;
+            font-family: 'Ubuntu Mono', monospace;
+            font-size: 22px;
+
+            margin-top: 5px;
+        }
+    }
+}

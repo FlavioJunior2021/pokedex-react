@@ -69,40 +69,4 @@
         }
         
     }
-    .pokemon-stats{
-
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        flex-wrap: wrap;
-        padding-top: 10px;
-        
-        #life,#speed,#attack,#defense,#especial-defense,#especial-attack{
-
-            text-align: center;
-            padding-top: 45px;
-            margin: 25px;
-
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            opacity: 0.9;
-
-            h3{
-                font-family:'Ubuntu Mono', monospace;
-                color: white;
-                font-size: 25px;
-            }
-            p{
-                color: white;
-                font-size: 15px;
-                font-weight: bold;
-            }
-
-
-            &:hover{
-                opacity: 1;
-            }
-        }
-    }
 }

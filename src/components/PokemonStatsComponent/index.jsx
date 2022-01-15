@@ -3,9 +3,12 @@ import './index.scss';
 
 export function PokemonStats({life, attack, defense, especialAttactk, especialDefense, speed}){
     return(
-        <div className="pokemon-stats">
-            <section id="life" style={{border: "1px solid black", backgroundColor: 'green'}}>
-                    
+        <div id="pokemon-stats">
+            <section id="life">
+                <div className="life-stats" style={{border: "1px solid black", backgroundColor: 'green'}}>
+                    <h2>{ life }</h2>
+                </div>
+                <p>life</p>
             </section>
         </div>
     );

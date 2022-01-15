@@ -80,7 +80,7 @@
         #life,#speed,#attack,#defense,#especial-defense,#especial-attack{
 
             text-align: center;
-            padding-top: 59px;
+            padding-top: 45px;
             margin: 25px;
 
             width: 150px;
@@ -93,6 +93,12 @@
                 color: white;
                 font-size: 25px;
             }
+            p{
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
 
             &:hover{
                 opacity: 1;

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { PokemonStats } from '../PokemonStatsComponent/index';
 
 import './index.scss';

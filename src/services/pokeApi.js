@@ -13,12 +13,11 @@ export async function fetchPokemon(id){
         type: json.types[0].type.name,
         weight: json.weight,
         species: json.species.name,
-        moves: json.moves,
-        height: json.height
+        height: json.height,
+        moves: json.moves
     }
     return filteredPokemon;
 }
-
 export async function fetchAllPokemons(num){
     const req = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}/`);
     const json = await req.json();

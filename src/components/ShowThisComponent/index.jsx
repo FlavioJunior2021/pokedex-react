@@ -1,34 +1,9 @@
 import { useState } from 'react';
-
-import { PokeMovesController } from '../PokeMovesComponent/index';
 import { PokemonStats } from '../PokemonStatsComponent/index';
 
 import './index.scss';
 
-export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,moves,height } ){
-
-    const [click, setClick] = useState(false);
-    const [movesArray, setMovesArray] = useState([]);
-    const movesArr = [];
-
-    async function getPokeMoves(){
-       for(let i = 0; i < moves.length; i++){
-           let thisMove = moves[i].move.url;
-           let req = await fetch(thisMove);
-           let json = await req.json();
-           movesArr.push(json);
-       }
-       setMovesArray(movesArr);
-    }
-    function setMoves(){
-        if(click){
-            setClick(false);
-        }else{
-            setClick(true);
-            getPokeMoves();
-        }
-    }
-
+export function ShowThisComponent( { name,image,hp,attack,defense,especial,especial2,speed,type,weight,height } ){
     return(
         <div id="show-component">
             <div className="header">

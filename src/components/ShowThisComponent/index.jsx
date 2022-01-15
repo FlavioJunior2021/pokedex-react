@@ -46,6 +46,11 @@ export function ShowThisComponent( { name,image,hp,attack,defense,especial,espec
             <div className="pokemon-stats">
                 <PokemonStats 
                     life={ hp }
+                    attack={ attack }
+                    defense={ defense }
+                    speed={ speed }
+                    especialAttactk={ especial }
+                    especialDefense={ especial2 }
                 />
             </div>
         </div>

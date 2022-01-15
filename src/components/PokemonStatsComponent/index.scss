@@ -3,12 +3,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+    justify-content: center;
 
-    #life{
+    #description{
+
         display: flex;
         flex-direction: column;
+        margin: 18px;
+        text-align: center;
 
-        .life-stats{
+        .stats{
             padding: 50px;
             border-radius: 50%;
             h2{
@@ -20,7 +25,7 @@
         p{
             color: #333;
             font-family: 'Ubuntu Mono', monospace;
-            font-size: 22px;
+            font-size: 18px;
 
             margin-top: 5px;
         }

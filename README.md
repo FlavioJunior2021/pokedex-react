@@ -1,7 +1,7 @@
 <h1 align="center"> Pokedex </h1>
 
-![Captura de tela 2022-01-11 - 08 45 06](https://user-images.githubusercontent.com/89926456/148937846-947c24c2-4436-4592-9c67-2b2a262141a6.png)
-![Captura de tela 2022-01-12 - 11 50 20](https://user-images.githubusercontent.com/89926456/149164841-1d3f77c4-038e-4ebd-bf1d-a91f50237dfd.png)
+<img src="https://user-images.githubusercontent.com/89926456/148937846-947c24c2-4436-4592-9c67-2b2a262141a6.png" alt="pokedex" width="400px" />
+<img src="https://user-images.githubusercontent.com/89926456/149628818-06f89502-5776-4b6d-b2ea-e0e68543862f.png" alt="pokedex"  width="400px" />
 
 
 <h1 align="center">

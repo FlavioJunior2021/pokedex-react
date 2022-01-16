@@ -20,7 +20,7 @@ export function SearchComponent(){
 
     async function getValue(e){
         if(e.key === "Enter"){
-            let target = e.target.value;
+            let target = e.target.value.toLowerCase();
             await testPokemon(target).then(() => {
                 setUserPokemon(target);
                 navigate("/pokemon");

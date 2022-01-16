@@ -5,9 +5,10 @@
 
 
 <h1 align="center">
-  Pokedex developed with ReactJs
+  Pokedex developed with ReactJs V 1.0
 </h1>
 > :construction: project under construction :construction:
+> available here: https://pokedex-react-129b0.web.app/
 
 ## :hammer: project features
 

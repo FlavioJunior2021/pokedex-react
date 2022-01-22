@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import { fetchAllPokemons } from '../../services/pokeApi';
 import { usePokemon } from '../../context/context';
 import { useNavigate } from 'react-router-dom';
+import Reveal from 'react-reveal/Reveal';
 
 import { SelectComponent } from '../SelectPokemonComponent/index';
 
@@ -40,11 +41,13 @@ export function AllPokemonsComponent(){
     return(
         <div id="container2">
             {pokemons.map((pokemons, i) => 
+                <Reveal>
                 <button key={i} onClick={() => getPokemons(pokemons.name)}> 
                     <SelectComponent image={pokemons.sprite} name={pokemons.name} id={pokemons.id}/>
                 </button>
+                </Reveal>
             )}
             <button id="load-button" onClick={() => setLoad(load + 30)}>load more</button>
-        </div>
+        </div> 
     );
 };

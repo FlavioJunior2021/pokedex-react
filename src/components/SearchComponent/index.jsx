@@ -35,7 +35,7 @@ export function SearchComponent(){
         <div id="search-component">
             <Toaster
                 toastOptions={{
-                    duration: 3000,
+                    duration: 2000,
                     style:{
                         border: '1px solid #000',
                         padding: '16px',

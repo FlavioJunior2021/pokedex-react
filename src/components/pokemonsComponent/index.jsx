@@ -41,7 +41,7 @@ export function AllPokemonsComponent(){
     return(
         <div id="container2">
             {pokemons.map((pokemons, i) => 
-                <Reveal>
+                <Reveal key={i}>
                 <button key={i} onClick={() => getPokemons(pokemons.name)}> 
                     <SelectComponent image={pokemons.sprite} name={pokemons.name} id={pokemons.id}/>
                 </button>
